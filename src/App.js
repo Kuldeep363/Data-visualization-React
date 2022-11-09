@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import BarChart from './components/barCharts/BarChart';
+import ScatterChart from './components/scatterCharts/ScatterChart';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='charts'>
+      <div>
+        <ScatterChart x={'Color intensity'} y={'Hue'} />
+      </div>
+      <div>
+        <BarChart x={'Alcohol'} y={'Malic Acid'} />
+      </div>
     </div>
   );
 }
